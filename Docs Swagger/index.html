@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Projeto Integrador</title>
+  <title>ColaboraTech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8" />
@@ -711,6 +711,10 @@
       "type" : "string",
       "format" : "date-time"
     },
+    "curtir" : {
+      "type" : "integer",
+      "format" : "int32"
+    },
     "tema" : {
       "$ref" : "#/components/schemas/Tema"
     },
@@ -817,6 +821,9 @@
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
                   <li class="nav-header" data-group="PostagemController"><a href="#api-PostagemController">API Methods - PostagemController</a></li>
+                    <li data-group="PostagemController" data-name="curtirPostagem" class="">
+                      <a href="#api-PostagemController-curtirPostagem">curtirPostagem</a>
+                    </li>
                     <li data-group="PostagemController" data-name="deletePostagem" class="">
                       <a href="#api-PostagemController-deletePostagem">deletePostagem</a>
                     </li>
@@ -882,7 +889,7 @@
       <div id="content">
         <div id="project">
           <div class="pull-left">
-            <h1>Projeto Integrador</h1>
+            <h1>ColaboraTech</h1>
           </div>
           <div class="clearfix"></div>
         </div>
@@ -897,6 +904,297 @@
         <div id="sections">
                 <section id="api-PostagemController">
                   <h1>PostagemController</h1>
+                    <div id="api-PostagemController-curtirPostagem">
+                      <article id="api-PostagemController-curtirPostagem-0" data-group="User" data-name="curtirPostagem" data-version="0">
+                        <div class="pull-left">
+                          <h1>curtirPostagem</h1>
+                          <p></p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="put"><code><span class="pln">/postagens/curtir/{id}</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-PostagemController-curtirPostagem-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-PostagemController-curtirPostagem-0-java">Java</a></li>
+                          <li class=""><a href="#examples-PostagemController-curtirPostagem-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-PostagemController-curtirPostagem-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-PostagemController-curtirPostagem-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-PostagemController-curtirPostagem-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-PostagemController-curtirPostagem-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-PostagemController-curtirPostagem-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-PostagemController-curtirPostagem-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-PostagemController-curtirPostagem-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-PostagemController-curtirPostagem-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-PostagemController-curtirPostagem-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X PUT\
+"http://localhost:8080/postagens/curtir/{id}"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.PostagemControllerApi;
+
+import java.io.File;
+import java.util.*;
+
+public class PostagemControllerApiExample {
+
+    public static void main(String[] args) {
+        
+        PostagemControllerApi apiInstance = new PostagemControllerApi();
+        Long id = 789; // Long | 
+        try {
+            apiInstance.curtirPostagem(id);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PostagemControllerApi#curtirPostagem");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.PostagemControllerApi;
+
+public class PostagemControllerApiExample {
+
+    public static void main(String[] args) {
+        PostagemControllerApi apiInstance = new PostagemControllerApi();
+        Long id = 789; // Long | 
+        try {
+            apiInstance.curtirPostagem(id);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PostagemControllerApi#curtirPostagem");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Long *id = 789; // 
+
+PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
+
+[apiInstance curtirPostagemWith:id
+              completionHandler: ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
+
+var api = new ColaboraTech.PostagemControllerApi()
+var id = 789; // {{Long}} 
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.curtirPostagem(id, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class curtirPostagemExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new PostagemControllerApi();
+            var id = 789;  // Long | 
+
+            try
+            {
+                apiInstance.curtirPostagem(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PostagemControllerApi.curtirPostagem: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiPostagemControllerApi();
+$id = 789; // Long | 
+
+try {
+    $api_instance->curtirPostagem($id);
+} catch (Exception $e) {
+    echo 'Exception when calling PostagemControllerApi->curtirPostagem: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::PostagemControllerApi;
+
+my $api_instance = WWW::SwaggerClient::PostagemControllerApi->new();
+my $id = 789; # Long | 
+
+eval { 
+    $api_instance->curtirPostagem(id => $id);
+};
+if ($@) {
+    warn "Exception when calling PostagemControllerApi->curtirPostagem: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-PostagemController-curtirPostagem-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.PostagemControllerApi()
+id = 789 # Long | 
+
+try: 
+    api_instance.curtir_postagem(id)
+except ApiException as e:
+    print("Exception when calling PostagemControllerApi->curtirPostagem: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">id*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_curtirPostagem_id">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      Long
+                                                  </span>
+                                                      <span class="format">
+                                                          (int64)
+                                                      </span>
+                                  
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Sucesso! </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 201 - Objeto Persistido! </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 204 - Objeto Excluído! </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 400 - Erro na Requisição! </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 401 - Acesso Não Autorizado! </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 404 - Objeto Não Encontrado! </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 500 - Erro na Aplicação! </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-PostagemController-deletePostagem">
                       <article id="api-PostagemController-deletePostagem-0" data-group="User" data-name="deletePostagem" data-version="0">
                         <div class="pull-left">
@@ -993,9 +1291,9 @@ PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-PostagemController-deletePostagem-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.PostagemControllerApi()
+var api = new ColaboraTech.PostagemControllerApi()
 var id = 789; // {{Long}} 
 
 var callback = function(error, data, response) {
@@ -1281,9 +1579,9 @@ PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-PostagemController-getAll2-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.PostagemControllerApi()
+var api = new ColaboraTech.PostagemControllerApi()
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -1534,9 +1832,9 @@ PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-PostagemController-getAllAsc-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.PostagemControllerApi()
+var api = new ColaboraTech.PostagemControllerApi()
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -1787,9 +2085,9 @@ PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-PostagemController-getAllDesc-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.PostagemControllerApi()
+var api = new ColaboraTech.PostagemControllerApi()
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -2043,9 +2341,9 @@ PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-PostagemController-getById2-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.PostagemControllerApi()
+var api = new ColaboraTech.PostagemControllerApi()
 var id = 789; // {{Long}} 
 
 var callback = function(error, data, response) {
@@ -2334,9 +2632,9 @@ PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-PostagemController-getByTitulo-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.PostagemControllerApi()
+var api = new ColaboraTech.PostagemControllerApi()
 var titulo = titulo_example; // {{String}} 
 
 var callback = function(error, data, response) {
@@ -2623,9 +2921,9 @@ PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-PostagemController-postPostagem-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.PostagemControllerApi()
+var api = new ColaboraTech.PostagemControllerApi()
 var body = ; // {{Postagem}} 
 
 var callback = function(error, data, response) {
@@ -2929,9 +3227,9 @@ PostagemControllerApi *apiInstance = [[PostagemControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-PostagemController-putPostagem-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.PostagemControllerApi()
+var api = new ColaboraTech.PostagemControllerApi()
 var body = ; // {{Postagem}} 
 
 var callback = function(error, data, response) {
@@ -3237,9 +3535,9 @@ TemaControllerApi *apiInstance = [[TemaControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-TemaController-deleteTema-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.TemaControllerApi()
+var api = new ColaboraTech.TemaControllerApi()
 var id = 789; // {{Long}} 
 
 var callback = function(error, data, response) {
@@ -3525,9 +3823,9 @@ TemaControllerApi *apiInstance = [[TemaControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-TemaController-getAll1-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.TemaControllerApi()
+var api = new ColaboraTech.TemaControllerApi()
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -3781,9 +4079,9 @@ TemaControllerApi *apiInstance = [[TemaControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-TemaController-getById1-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.TemaControllerApi()
+var api = new ColaboraTech.TemaControllerApi()
 var id = 789; // {{Long}} 
 
 var callback = function(error, data, response) {
@@ -4072,9 +4370,9 @@ TemaControllerApi *apiInstance = [[TemaControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-TemaController-getByNome-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.TemaControllerApi()
+var api = new ColaboraTech.TemaControllerApi()
 var nome = nome_example; // {{String}} 
 
 var callback = function(error, data, response) {
@@ -4361,9 +4659,9 @@ TemaControllerApi *apiInstance = [[TemaControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-TemaController-postTema-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.TemaControllerApi()
+var api = new ColaboraTech.TemaControllerApi()
 var body = ; // {{Tema}} 
 
 var callback = function(error, data, response) {
@@ -4667,9 +4965,9 @@ TemaControllerApi *apiInstance = [[TemaControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-TemaController-putTema-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.TemaControllerApi()
+var api = new ColaboraTech.TemaControllerApi()
 var body = ; // {{Tema}} 
 
 var callback = function(error, data, response) {
@@ -4972,9 +5270,9 @@ UsuarioControllerApi *apiInstance = [[UsuarioControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-UsuarioController-getAll-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.UsuarioControllerApi()
+var api = new ColaboraTech.UsuarioControllerApi()
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -5228,9 +5526,9 @@ UsuarioControllerApi *apiInstance = [[UsuarioControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-UsuarioController-getById-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.UsuarioControllerApi()
+var api = new ColaboraTech.UsuarioControllerApi()
 var id = 789; // {{Long}} 
 
 var callback = function(error, data, response) {
@@ -5520,9 +5818,9 @@ UsuarioControllerApi *apiInstance = [[UsuarioControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-UsuarioController-login-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.UsuarioControllerApi()
+var api = new ColaboraTech.UsuarioControllerApi()
 var opts = { 
   'body':  // {{UsuarioLogin}} 
 };
@@ -5826,9 +6124,9 @@ UsuarioControllerApi *apiInstance = [[UsuarioControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-UsuarioController-postUsuario-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.UsuarioControllerApi()
+var api = new ColaboraTech.UsuarioControllerApi()
 var body = ; // {{Usuario}} 
 
 var callback = function(error, data, response) {
@@ -6132,9 +6430,9 @@ UsuarioControllerApi *apiInstance = [[UsuarioControllerApi alloc] init];
                             </div>
 
                             <div class="tab-pane" id="examples-UsuarioController-putUsuario-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var ProjetoIntegrador = require('projeto_integrador');
+                              <pre class="prettyprint"><code class="language-js">var ColaboraTech = require('colabora_tech');
 
-var api = new ProjetoIntegrador.UsuarioControllerApi()
+var api = new ColaboraTech.UsuarioControllerApi()
 var body = ; // {{Usuario}} 
 
 var callback = function(error, data, response) {
